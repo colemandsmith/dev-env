@@ -1,0 +1,47 @@
+set number
+set ruler
+syntax on
+set expandtab
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set showcmd
+"set cursorline
+"filetype indent on
+set wildmenu
+set hlsearch
+set incsearch
+autocmd FileType javascript setlocal tabstop=2
+autocmd FileType javascript setlocal softtabstop=2
+autocmd FileType javascript setlocal shiftwidth=2
+autocmd FileType html setlocal tabstop=2 
+autocmd FileType html setlocal softtabstop=2
+autocmd FileType html setlocal shiftwidth=2
+autocmd FileType ruby setlocal tabstop=2
+autocmd FileType ruby setlocal softtabstop=2
+autocmd FileType ruby setlocal shiftwidth=2
+set laststatus=2
+colorscheme codedark
+set rtp+=/usr/local/opt/fzf
+
+set nocompatible
+filetype off
+
+let &runtimepath.=',~/.vim/bundle/ale'
+
+filetype plugin on
+
+call plug#begin()
+Plug 'tpope/vim-fugitive'
+call plug#end()
+
+let g:ale_fixers = {
+\ 'ruby': ['rubocop'],
+\ 'python': ['flake8'],
+\}
+
+let g:ale_linters = {
+\ 'ruby': ['rubocop'],
+\ 'python': ['flake8'],
+\}

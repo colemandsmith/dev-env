@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/colemansmith/projects/person-matching/pmatch/tests'
+let g:netrw_dirhist_2='/Users/colemansmith/projects/identity-resolution/front_end/externals'
+let g:netrw_dirhist_3='/Users/colemansmith/projects/identity-resolution/front_end/src'
+let g:netrw_dirhist_4='/Users/colemansmith/projects/identity-resolution/front_end/src/components/pages/home'
+let g:netrw_dirhist_5='/Users/colemansmith/projects/person-matching/pmatch/tests'
+let g:netrw_dirhist_6='/Users/colemansmith/projects/id-resolution-jobs/scripts'
+let g:netrw_dirhist_7='/Users/colemansmith/projects/identity-resolution/.git/hooks'
+let g:netrw_dirhist_8='/Users/colemansmith/projects/identity-resolution/front_end/src/components/common'
+let g:netrw_dirhist_9='/opt/spark-2.4.0-bin-without-hadoop'
