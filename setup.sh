@@ -10,6 +10,11 @@ fi
 
 
 # vim setup
+if [[ "$platform" == "linux" ]]
+then
+  sudo apt update
+  sudo apt install vim -y
+fi
 if [ ! -d "$HOME/.vim" ]
 then
     mkdir "$HOME/.vim"
