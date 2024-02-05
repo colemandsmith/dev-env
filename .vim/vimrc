@@ -22,7 +22,6 @@ set backspace=indent,eol,start
 set nocompatible
 filetype off
 
-let &runtimepath.=',~/.vim/bundle/ale'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " autocmd VimEnter * NERDTree | wincmd p
@@ -32,6 +31,7 @@ filetype plugin on
 call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
+Plug 'dense-analysis/ale'
 Plug 'artanikin/vim-synthwave84'
 Plug 'relastle/bluewery.vim'
 Plug 'brooth/far.vim'
@@ -39,6 +39,8 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'preservim/nerdtree'
 Plug 'dominikduda/vim_current_word'
 call plug#end()
+
+let g:vimspector_enable_mappings = 'HUMAN'
 
 let g:vim_current_word#highlight_delay = 250
 
