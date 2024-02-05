@@ -34,10 +34,11 @@ Plug 'tpope/vim-commentary'
 Plug 'dense-analysis/ale'
 Plug 'artanikin/vim-synthwave84'
 Plug 'relastle/bluewery.vim'
-Plug 'brooth/far.vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'preservim/nerdtree'
 Plug 'dominikduda/vim_current_word'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let g:vimspector_enable_mappings = 'HUMAN'
