@@ -24,6 +24,11 @@ then
   $HOME/.fzf/install
 fi
 
+if [ ! -d "$HOME/bin" ]
+then
+    mkdir "$HOME/bin"
+fi
+
 # Ripgrep
 if ! command -v rg &> /dev/null
 then
