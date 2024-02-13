@@ -8,26 +8,12 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='osx'
 fi
 
-
-# vim setup
-if [[ "$platform" == "linux" ]]
-then
-  sudo apt update
-  sudo apt install vim -y
-fi
-if [ ! -d "$HOME/.vim" ]
-then
-    mkdir "$HOME/.vim"
-fi
-cp -r .vim/* "$HOME/.vim/"
-vim +PlugInstall +qall
-
 if ! command -v fzf &> /dev/null
 then
   if [[ "$platform" == "linux" ]]
   then
     sudo apt update
-    sudo apt install fzf
+    sudo apt install fzf -y
   else 
     # FZF
     git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
@@ -46,7 +32,7 @@ then
   if [[ "$platform" == "linux" ]]
   then
     sudo apt update
-    sudo apt install ripgrep
+    sudo apt install ripgrep -y
   else 
     curl -LO 'https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep-11.0.2-x86_64-unknown-linux-musl.tar.gz'
     tar xf ripgrep-11.0.2-*.tar.gz
@@ -65,6 +51,19 @@ if ! command -v ag &> /dev/null
 then
   if [[ "$platform" == "linux" ]]
   then
-    sudo apt install silversearcher-ag
+    sudo apt install silversearcher-ag -y
   fi
 fi
+
+# vim setup
+if [[ "$platform" == "linux" ]]
+then
+  sudo apt update
+  sudo apt install vim -y
+fi
+if [ ! -d "$HOME/.vim" ]
+then
+    mkdir "$HOME/.vim"
+fi
+cp -r .vim/* "$HOME/.vim/"
+vim +'PlugInstall --sync' +qall &> /dev/null < /dev/tty
