@@ -56,10 +56,12 @@ then
 fi
 
 # vim setup
-if [[ "$platform" == "linux" ]]
-then
-  sudo apt update
-  sudo apt install vim -y
+if ! command -v vim &> /dev/null; then
+  if [[ "$platform" == "linux" ]]
+  then
+    sudo apt update
+    sudo apt install vim -y
+  fi
 fi
 if [ ! -d "$HOME/.vim" ]
 then
