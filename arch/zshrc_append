@@ -1,0 +1,13 @@
+
+export EDITOR=vim
+set -o vi
+
+bindkey -e
+
+export CMAKE_GENERATOR="Ninja"
+
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
